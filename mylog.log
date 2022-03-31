@@ -1,0 +1,25 @@
+[2022-03-31 11:43:26,378] APPMAN-M-094.local/INFO/locust.main: Run time limit set to 10 seconds
+[2022-03-31 11:43:26,379] APPMAN-M-094.local/INFO/locust.main: Starting Locust 2.8.5
+[2022-03-31 11:43:26,381] APPMAN-M-094.local/INFO/locust.runners: Ramping to 1 users at a rate of 1.00 per second
+[2022-03-31 11:43:26,381] APPMAN-M-094.local/DEBUG/locust.runners: Ramping to {"MyLoadTest": 1} (1 total users)
+[2022-03-31 11:43:26,381] APPMAN-M-094.local/DEBUG/locust.runners: Spawning additional {"MyLoadTest": 1} ({"MyLoadTest": 0} already running)...
+[2022-03-31 11:43:26,382] APPMAN-M-094.local/DEBUG/locust.runners: 1 users spawned
+[2022-03-31 11:43:26,382] APPMAN-M-094.local/DEBUG/locust.runners: All users of class MyLoadTest spawned
+[2022-03-31 11:43:26,382] APPMAN-M-094.local/DEBUG/locust.runners: 0 users have been stopped, 1 still running
+[2022-03-31 11:43:26,382] APPMAN-M-094.local/INFO/locust.runners: All users spawned: {"MyLoadTest": 1} (1 total users)
+[2022-03-31 11:43:26,385] APPMAN-M-094.local/DEBUG/urllib3.connectionpool: Starting new HTTPS connection (1): http.cat:443
+[2022-03-31 11:43:27,494] APPMAN-M-094.local/DEBUG/urllib3.connectionpool: https://http.cat:443 "GET /300 HTTP/1.1" 200 45941
+[2022-03-31 11:43:28,528] APPMAN-M-094.local/DEBUG/urllib3.connectionpool: https://http.cat:443 "GET /200 HTTP/1.1" 200 27012
+[2022-03-31 11:43:29,561] APPMAN-M-094.local/DEBUG/urllib3.connectionpool: https://http.cat:443 "GET /300 HTTP/1.1" 200 45941
+[2022-03-31 11:43:30,598] APPMAN-M-094.local/DEBUG/urllib3.connectionpool: https://http.cat:443 "GET /300 HTTP/1.1" 200 45941
+[2022-03-31 11:43:31,639] APPMAN-M-094.local/DEBUG/urllib3.connectionpool: https://http.cat:443 "GET /300 HTTP/1.1" 200 45941
+[2022-03-31 11:43:32,675] APPMAN-M-094.local/DEBUG/urllib3.connectionpool: https://http.cat:443 "GET /300 HTTP/1.1" 200 45941
+[2022-03-31 11:43:34,693] APPMAN-M-094.local/DEBUG/urllib3.connectionpool: https://http.cat:443 "GET /400 HTTP/1.1" 200 47966
+[2022-03-31 11:43:35,550] APPMAN-M-094.local/INFO/locust.main: --run-time limit reached. Stopping Locust
+[2022-03-31 11:43:35,551] APPMAN-M-094.local/DEBUG/locust.runners: Stopping all users
+[2022-03-31 11:43:35,551] APPMAN-M-094.local/DEBUG/locust.runners: Stopping Greenlet-0
+[2022-03-31 11:43:35,551] APPMAN-M-094.local/DEBUG/locust.runners: 1 users have been stopped, 0 still running
+[2022-03-31 11:43:35,613] APPMAN-M-094.local/INFO/locust.main: writing html report to file: run1
+[2022-03-31 11:43:35,615] APPMAN-M-094.local/DEBUG/locust.main: Running teardowns...
+[2022-03-31 11:43:35,615] APPMAN-M-094.local/INFO/locust.main: Shutting down (exit code 0)
+[2022-03-31 11:43:35,615] APPMAN-M-094.local/DEBUG/locust.main: Cleaning up runner...
