@@ -2,11 +2,10 @@ from locust import HttpUser, task, constant, SequentialTaskSet
 from read_test_data import CsvRead
 
 
-class MyScript(SequentialTaskSet):
+# 3. Pass parameter name and data
 
-    # def __init__(self, parent):
-    #     super().__init__(parent)
-    #     self.test_data = CsvRead("DataParameterization\\customer-data.csv").read()
+
+class MyScript(SequentialTaskSet):
 
     @task
     def place_order(self):
