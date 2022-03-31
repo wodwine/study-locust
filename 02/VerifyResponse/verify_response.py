@@ -44,3 +44,5 @@ class MyLoadTest(HttpUser):
     host = "https://httpbin.org"
     wait_time = constant(1)
     tasks = [MyScript]
+
+# locust -f 02/VerifyResponse/verify_response.py
