@@ -1,6 +1,9 @@
 from locust import HttpUser, constant, task
 
 
+# 2. Use Locust to test the http request with Task
+
+
 class MyReqRes(HttpUser):
     # host = "https://reqres.in"
     wait_time = constant(1)

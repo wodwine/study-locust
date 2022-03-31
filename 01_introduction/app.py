@@ -1,6 +1,8 @@
 from locust import User, task, constant
 
 
+# 1. Introduction to Locust
+
 class MyFirstTest(User):
     weight = 2
     wait_time = constant(1)

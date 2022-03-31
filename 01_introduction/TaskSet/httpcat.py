@@ -1,6 +1,10 @@
 from locust import TaskSet, constant, task, HttpUser
 from random import randint
 
+
+# 3. Use Locust to test with the TaskSet
+
+
 class MyHTTPCat(TaskSet):
 
     @task
