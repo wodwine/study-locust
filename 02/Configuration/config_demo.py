@@ -1,6 +1,8 @@
 from locust import HttpUser, task, constant
 
 
+# 4. Config the config
+
 class LoadTest(HttpUser):
     wait_time = constant(1)
 

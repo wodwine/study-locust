@@ -3,6 +3,8 @@ import re
 import random
 
 
+# 5. Get correlation to login
+
 class PetStore(SequentialTaskSet):
 
     def __init__(self, parent):
