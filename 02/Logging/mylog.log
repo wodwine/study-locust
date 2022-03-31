@@ -1,0 +1,6 @@
+[2022-03-31 15:19:39,237] APPMAN-M-094.local/INFO/locust.main: Starting web interface at http://0.0.0.0:8089 (accepting connections from all network interfaces)
+[2022-03-31 15:19:39,251] APPMAN-M-094.local/INFO/locust.main: Starting Locust 2.8.5
+[2022-03-31 15:20:43,889] APPMAN-M-094.local/INFO/locust.main: Shutting down (exit code 0)
+[2022-03-31 15:21:17,142] APPMAN-M-094.local/INFO/locust.main: Starting web interface at http://0.0.0.0:8089 (accepting connections from all network interfaces)
+[2022-03-31 15:21:17,156] APPMAN-M-094.local/INFO/locust.main: Starting Locust 2.8.5
+[2022-03-31 15:21:38,214] APPMAN-M-094.local/INFO/locust.main: Shutting down (exit code 0)
