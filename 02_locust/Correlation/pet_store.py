@@ -94,4 +94,4 @@ class LoadTest(HttpUser):
     wait_time = constant(1)
     tasks = [PetStore]
 
-# locust -f 02/Correlation/pet_store.py -u 1 -r 1 -t 20s
+# locust -f 02_locust/Correlation/pet_store.py -u 1 -r 1 -t 20s

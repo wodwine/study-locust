@@ -15,6 +15,6 @@ class LoadTest(HttpUser):
         res = self.client.get("/", name=self.hostname)
         print(res.text)
 
-# locust -f 02/Configuration/config_demo.py
-# locust -f 02/Configuration/config_demo.py --config 02/Configuration/mycustom.conf
-# locust -f 02/Configuration/config_demo.py --config 02/Configuration/mycustom.yaml
+# locust -f 02_locust/Configuration/config_demo.py
+# locust -f 02_locust/Configuration/config_demo.py --config 02_locust/Configuration/mycustom.conf
+# locust -f 02_locust/Configuration/config_demo.py --config 02_locust/Configuration/mycustom.yaml

@@ -9,7 +9,7 @@ class MyScript(SequentialTaskSet):
 
     @task
     def place_order(self):
-        test_data = CsvRead("02/DataParameterization/customer-data.csv").read()
+        test_data = CsvRead("02_locust/DataParameterization/customer-data.csv").read()
         print(test_data)
 
         data = {
@@ -36,5 +36,5 @@ class MyLoadTest(HttpUser):
     wait_time = constant(1)
     tasks = [MyScript]
 
-# locust -f 02/DataParameterization/data_parameterization.py
+# locust -f 02_locust/DataParameterization/data_parameterization.py
 # -u 3 -r 1 -t 5s --only-summary --headless

@@ -20,5 +20,5 @@ class LoadTest(HttpUser):
     wait_time = constant(1)
     tasks = [PetStore]
 
-# locust -f 02/Logging/pet_store.py -u 1 -r 1 -t 20s
-# locust -f 02/Logging/pet_store.py -u 1 -r 1 -t 20s --logfile 02/Logging/mylog.log
+# locust -f 02_locust/Logging/pet_store.py -u 1 -r 1 -t 20s
+# locust -f 02_locust/Logging/pet_store.py -u 1 -r 1 -t 20s --logfile 02_locust/Logging/mylog.log

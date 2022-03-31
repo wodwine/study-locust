@@ -1,26 +1,29 @@
-from locust import HttpUser, task, constant, SequentialTaskSet
+from locust import HttpUser, task, constant, SequentialTaskSet, tag
 
 
-# 1. Verify the responses
-
+# 2. Define a tag so the command will execute only that given tag
 
 class MyScript(SequentialTaskSet):
 
     @task
+    @tag('get', 'xml')
     def get_xml(self):
         result = self.client.get("/xml", name="XML")
-        print(self.get_xml.__name__, result)
+        print(result)
 
     @task
+    @tag('get', 'json')
     def get_json(self):
         expected_response = "Wake up to WonderWidgets!"
 
         with self.client.get("/json", catch_response=True, name="JSON") as response:
             result = True if expected_response in response.text else False  # Pythonic if else statement
-            print(self.get_json.__name__, result)  # Prints True if the response contains `expected_response`
+            print(self.get_json.__name__, result)  # Prints True if the response contains `expected_response`,
+            # else False
             response.success()  # Marking this as success
 
     @task
+    @tag('get', 'robots')
     def get_robots(self):
         expected_response = "*"
         result = "Fail"
@@ -31,6 +34,7 @@ class MyScript(SequentialTaskSet):
         print(self.get_robots.__name__, result)
 
     @task
+    @tag('get')
     def get_failure(self):
         expected_response = 404
         with self.client.get("/status/404", catch_response=True, name="HTTP 404") as response:
@@ -39,10 +43,23 @@ class MyScript(SequentialTaskSet):
             else:
                 response.success()
 
+    @task
+    @tag('post')
+    def post_json(self):
+        expected_response = 200
+        with self.client.post("/post", catch_response=True, name="Post") as response:
+            if response.status_code == expected_response:
+                response.success()
+            else:
+                response.failure("Post Failed")
+
 
 class MyLoadTest(HttpUser):
     host = "https://httpbin.org"
     wait_time = constant(1)
     tasks = [MyScript]
 
-# locust -f 02/VerifyResponse/verify_response.py
+# Post: locust -f 02_locust/Tag/tag_demo.py -u 1 -r 1 -t 5s --headless --only-summary --tags post
+#       locust -f 02_locust/Tag/tag_demo.py -u 1 -r 1 -t 5s --headless --only-summary --exclude-tags get
+#  Get: locust -f 02_locust/Tag/tag_demo.py -u 1 -r 1 -t 5s --headless --only-summary --tags get
+#       locust -f 02_locust/Tag/tag_demo.py -u 1 -r 1 -t 5s --headless --only-summary --exclude-tags post
