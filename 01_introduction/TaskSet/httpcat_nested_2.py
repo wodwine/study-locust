@@ -25,3 +25,5 @@ class MyLoadTest(HttpUser):
     host = "https://http.cat"
     tasks = [MyHTTPCat, MyAnotherHTTPCat]
     wait_time = constant(1)
+
+# locust -f 01_introduction/TaskSet/httpcat_nested_2.py

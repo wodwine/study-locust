@@ -27,3 +27,5 @@ class MySecondTest(User):
     @task
     def search(self):
         print("Searching for second...")
+
+# locust -f 01_introduction/Task/app.py

@@ -13,3 +13,5 @@ class MyUser(User):
     def launch(self):
         time.sleep(2)
         print("Constant Pacing Demo")
+
+# locust -f 01_introduction/WaitTime/wait_time.py

@@ -21,3 +21,5 @@ class MyLoadTest(HttpUser):
     host = "https://http.cat"
     tasks = [MySeqTask]
     wait_time = constant(1)
+
+# locust -f 01_introduction/SequentialTaskSet/sequential_taskset.py

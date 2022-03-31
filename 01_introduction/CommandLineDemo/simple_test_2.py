@@ -30,5 +30,5 @@ class MyLoadTest(HttpUser):
     wait_time = constant(1)
     tasks = [ChromeBrowserTest, FirefoxBrowserTest, EdgeBrowserTest]
 
-    # locust -f 01_introduction/CommandLineDemo/simple_test_2.py -u 1 -r 1 -t 10s
-    # --headless --print-stats --host=https://http.cat -L DEBUG --logfile mylog.log --html run1
+# locust -f 01_introduction/CommandLineDemo/simple_test_2.py -u 1 -r 1 -t 10s
+# --headless --print-stats --host=https://http.cat -L DEBUG --logfile mylog.log --html run1

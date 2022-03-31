@@ -20,3 +20,5 @@ class MyReqRes(HttpUser):
                                    {"name":"Wine","job":"ML Engineer"}
                                     """)
         print(res.text, res.status_code, res.headers)
+
+# locust -f 01_introduction/Task/app.py  --host=https://reqres.in
